@@ -1,0 +1,14 @@
+Logan Blevins
+CS 371
+2/24/17
+PG1
+
+Building: `gcc -o server *.c`
+Running: `./server <server port> <server root directory>`
+Description: Server runs continually receiving requests from mulitple clients, forking as needed, and attempts to handle them.
+            Server only accepts GET requests. Otherwise, it sends a 400 Bad Request response to the client. 
+            Only html, txt, jpg and gif file extensions are supported. Otherwise, it sends a 404 Not Found response to the client.
+            Additionally, if the file requested is not found, we also respond with 404 Not Found.
+Limitations: The most obvious is that of file support. Only 4 file extensions are supported. Also, the headers sent back are very basic and do not
+            include Content-Length or anything else that is more advanced.
+ 
